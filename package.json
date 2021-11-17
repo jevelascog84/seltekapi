@@ -2,16 +2,19 @@
   "name": "api-postgres",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
+  "scripts":{
+  	"start": "node app.js"
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "crypto-js": "^4.1.1",
-    "express": "^4.17.1",
-    "jsmodbus": "^4.0.6",
-    "jsonwebtoken": "^8.5.1",
-    "mysql": "^2.18.1",
-    "pg": "^8.7.1"
+	"crypto-js": "^4.1.1",
+	"express": "^4.17.1",
+	"jsmodbus": "^4.0.6",
+	"jsonwebtoken": "^8.5.1",
+	"mysql": "^2.18.1",
+	"pg": "^8.7.1"
   }
 }

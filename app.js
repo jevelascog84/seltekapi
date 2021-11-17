@@ -8,14 +8,8 @@ const sensores = require('./sensores');
 const equipos = require('./equipos');
 const querystring = require('querystring');
 const http = require('http')
-const port = 3000;
+const port = 3001;
 const hostname = '127.0.0.1';
-
-const server = http.createServer(app, (req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World! I am your new NodeJS app! \n');
-});
 
 var cors = require('cors')
 
@@ -71,7 +65,7 @@ app.post('/sensor', sensores.newSensor);
 app.put('/sensor/:id', sensores.editSensor);
 app.delete('/sensor/:id', sensores.delSensorId);
 
-
-server.listen(port, hostname, () => {
-	console.log(`App running on port ${port}.`)
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
 })
+
